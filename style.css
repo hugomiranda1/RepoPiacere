@@ -7,6 +7,9 @@ body{
     margin: 0;
     padding: 0;
 }
+#Menu{
+  position: sticky;
+}
 *{
   padding: 0;
   margin: 0;
@@ -14,10 +17,12 @@ body{
 }
 
 nav{
+  
   background: #e0e0e0bb;
   height: 80px;
   width: 100%;
-  position: fixed;
+  position:fixed ;
+  z-index: 1;
 }
 .enlace{
   position: absolute;
@@ -60,16 +65,16 @@ nav ul li a:hover{
 #check{
   display: none;
 }
-.contenedor{
+#Home{
   background-color: #ff8484;
   width: 100%;
+  height: 105%;
   
 }
-.imagenpres{
-  
+#imgpng{
+
   width: 100%;
-  height: 120%;
- 
+  height: 105%;
 }
 
 @media (max-width: 952px){
@@ -147,8 +152,58 @@ nav ul li a:hover{
     position: relative;
   }
 }
+#Product-mobile{
+  display: none;
 
-#Productos{
+}
+#Product{
+  display: flex;
   background-color: #ff8484;
   height:2000px;
+  padding-right: 40px;
+  padding-left: 40px;
+ 
 }
+
+
+
+
+.card{
+  box-shadow:black;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 20px;
+  margin-top: 130px;
+  height: 400px;
+  width: 180px;
+  background-color: #fff;
+  flex: 1;
+  transition: .3s all ease;
+  background-image: url(img.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+.card:hover{
+  flex: 1.1;
+  background-color: rgb(207, 207, 207);
+}
+
+
+
+
+@media (max-width: 768px){
+
+  #Product{
+    display: none;
+    background-color: #ff8484;
+    height:2000px;
+    z-index: 0;
+  }
+  #Product-mobile{
+    display:flex;
+  }
+
+
+}
+
